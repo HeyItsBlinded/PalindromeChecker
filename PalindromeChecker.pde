@@ -29,4 +29,26 @@ public class Sketch extends PApplet {
     result = result + sWord.charAt(i);
   return result;
 }
+
+public String noCapitals(String sWord){
+  return sWord.toLowerCase();
+}
+
+public String noSpaces(String sWord){
+  String empty = "";
+  for (int i = 0; i < sWord.length(); i++)
+  if (Character.isLetter(sWord.charAt(i)) == true) {
+    empty = empty + sWord.charAt(i);
+  }
+  return empty;
+}
+
+public String onlyLetters(String sWord){
+  String New = "";
+  for (int i = 0; i < sWord.length(); i++)
+    if (Character.isLetter(sWord.charAt(i)) == true) {
+      New = New + sWord.charAt(i);
+    }
+    return New;
+}
 }

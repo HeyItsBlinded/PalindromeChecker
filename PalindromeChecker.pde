@@ -48,7 +48,7 @@ public String onlyLetters(String sWord){
 }
 
 public boolean isPalindrome(String sWord){
-  if(sWord.equals(reverse(sWord)))
+  if(noCapitals(noSpaces(onlyLetters(sWord))).equals(reverse(noCapitals(noSpaces(onlyLetters(sWord)))))) 
     return true;
   else
     return false;
